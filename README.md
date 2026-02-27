@@ -5,6 +5,12 @@
 Eldritch is a community-driven dark theme inspired by Lovecraftian horror. With tones from the dark abyss and an emphasis on green and blue, it caters to those who appreciate the darker side of life.
 </p>
 
+> **Note:** This is a personalized fork of [eldritch.nvim](https://github.com/eldritch-theme/eldritch.nvim).
+>
+> **Upstream variants:** `eldritch`, `eldritch-dark`, `eldritch-minimal`
+>
+> **Fork additions:** All other variants (kanagawa, tokyonight, rosepine, gruvbox, vscode-dark families with azure/emerald/crimson accents and fusion variants)
+
 Main Theme repo can be found [here](https://github.com/eldritch-theme/eldritch)
 
 ### Showcase
@@ -44,7 +50,7 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
 {
-  "eldritch-theme/eldritch.nvim",
+  "rcorreia/eldritch.nvim",
   lazy = false,
   priority = 1000,
   opts = {},
@@ -61,36 +67,51 @@ vim.cmd[[colorscheme eldritch]]
 
 #### Available variants
 
-Core variants:
+**Upstream (original theme):**
 
 - `eldritch`
 - `eldritch-dark`
 - `eldritch-minimal`
 
-Fusion variants:
+**Fork additions:**
+
+*Kanagawa variants:*
 
 - `eldritch-kanagawa`
+- `eldritch-kanagawa-azure`
+- `eldritch-kanagawa-emerald`
+- `eldritch-kanagawa-crimson`
 - `eldritch-kanagawa-fusion`
 - `eldritch-kanagawa-fusion-mid`
 - `eldritch-kanagawa-fusion-pop`
-- `eldritch-kanagawa-fusion-glow`
 - `eldritch-kanagawa-fusion-purple`
 - `eldritch-kanagawa-fusion-green`
+
+*Tokyonight variants:*
+
+- `eldritch-tokyonight-azure`
+- `eldritch-tokyonight-emerald`
+- `eldritch-tokyonight-crimson`
 - `eldritch-tokyonight-fusion`
+
+*Rosepine variants:*
+
+- `eldritch-rosepine-azure`
+- `eldritch-rosepine-emerald`
+- `eldritch-rosepine-crimson`
+
+*Gruvbox variants:*
+
+- `eldritch-gruvbox-azure`
+- `eldritch-gruvbox-emerald`
+- `eldritch-gruvbox-crimson`
 - `eldritch-gruvbox-fusion`
 
-Glow variants:
+*VSCode Dark variants:*
 
-- `eldritch-glow-aqua`
-- `eldritch-glow-solar`
-- `eldritch-glow-cobalt`
-- `eldritch-glow-emerald`
-- `eldritch-glow-amber`
-- `eldritch-glow-arctic`
-- `eldritch-glow-crimson`
-- `eldritch-glow-violet`
-- `eldritch-glow-orchid`
-- `eldritch-glow-fuchsia`
+- `eldritch-vscode-dark-azure`
+- `eldritch-vscode-dark-emerald`
+- `eldritch-vscode-dark-crimson`
 
 #### [Lualine](https://github.com/nvim-lualine/lualine.nvim)
 

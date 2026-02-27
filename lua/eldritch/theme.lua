@@ -111,7 +111,7 @@ function M.setup()
     -- Float         = { }, --    a floating point constant: 2.3e10
 
     Identifier = { fg = c.magenta, style = options.styles.variables }, -- (preferred) any variable name
-    Function = { fg = c.pink, style = options.styles.functions }, -- function name (also: methods for classes)
+    Function = { fg = c.function_fg or c.pink, style = options.styles.functions }, -- function name (also: methods for classes)
 
     Statement = { fg = c.magenta }, -- (preferred) any statement
     -- Conditional   = { }, --  if, then, else, endif, switch, etc.
@@ -1040,9 +1040,9 @@ function M.setup()
 
   local palette_name = options.palette or ""
   local is_pop_palette = type(palette_name) == "string"
-    and (palette_name:find("_pop", 1, true) or palette_name:find("_glow", 1, true))
+    and palette_name:find("_pop", 1, true)
   if is_pop_palette then
-    theme.highlights.Function = { fg = c.green, style = options.styles.functions }
+    theme.highlights.Function = { fg = c.function_fg or c.green, style = options.styles.functions }
     theme.highlights.Type = { fg = c.bright_cyan }
     theme.highlights.Keyword = { fg = c.magenta, style = options.styles.keywords }
     theme.highlights.Comment = { fg = c.comment, style = options.styles.comments }

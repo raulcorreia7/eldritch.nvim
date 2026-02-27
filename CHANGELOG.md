@@ -2,9 +2,20 @@
 
 ## 27 Feb 2026
 
-- Added curated Eldritch fusion variants and the glow variant family.
-- Expanded Treesitter/LSP/plugin highlight coverage for better readability.
-- Standardized variant naming to the `*-fusion` convention.
+### Fork Changes
+
+- Added accent variants (azure/emerald/crimson) for multiple theme families:
+  - **Kanagawa**: base + azure/emerald/crimson + fusion variants
+  - **Tokyonight**: azure/emerald/crimson + fusion
+  - **Rosepine**: azure/emerald/crimson
+  - **Gruvbox**: azure/emerald/crimson + fusion
+  - **VSCode Dark**: azure/emerald/crimson
+- Added `function_fg` palette property for customizable function colors
+- Fusion variants use consistent backgrounds with colored accents
+
+### Upstream (original theme)
+
+Core variants: `eldritch`, `eldritch-dark`, `eldritch-minimal`
 
 ## 27 Oct 2025
 

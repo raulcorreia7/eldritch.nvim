@@ -134,346 +134,6 @@ local function extend_palette(base, overrides)
 end
 
 ---@class Palette
-M.eldritch_glow_aqua = extend_palette(M.default, {
-  bg_dark = "#101420",
-  bg = "#181e2d",
-  bg_highlight = "#223047",
-  terminal_black = "#2b3752",
-  fg = "#e9f4ff",
-  fg_dark = "#b6c6e8",
-  fg_gutter = "#32405f",
-  fg_gutter_light = "#6a85c6",
-  dark3 = "#607ab8",
-  comment = "#738bc2",
-  dark5 = "#546ba4",
-  bright_cyan = "#7af0ff",
-  visual = "#3c5a8a",
-  cyan = "#45e1ff",
-  dark_cyan = "#2db3cd",
-  magenta = "#82b8ff",
-  magenta2 = "#58d6ff",
-  magenta3 = "#2f5f87",
-  pink = "#70dfff",
-  purple = "#79a9ef",
-  orange = "#ffbf7a",
-  yellow = "#f2e27d",
-  dark_yellow = "#c0b163",
-  green = "#5bf0b1",
-  bright_green = "#3fffc2",
-  dark_green = "#43c792",
-  red = "#ff8b7d",
-  bright_red = "#ff6d66",
-  git = { change = "#45e1ff", add = "#5bf0b1", delete = "#ff8b7d" },
-  gitSigns = { change = "#45e1ff", add = "#5bf0b1", delete = "#ff8b7d" },
-})
-
----@class Palette
-M.eldritch_glow_solar = extend_palette(M.default, {
-  bg_dark = "#11131f",
-  bg = "#1a1f2f",
-  bg_highlight = "#25304a",
-  terminal_black = "#2f3b57",
-  fg = "#fff4dd",
-  fg_dark = "#d2c4a5",
-  fg_gutter = "#394867",
-  fg_gutter_light = "#7f95cb",
-  dark3 = "#7389bc",
-  comment = "#8190be",
-  dark5 = "#6678a7",
-  bright_cyan = "#7ce6ff",
-  visual = "#4c5f8f",
-  cyan = "#52d0ff",
-  dark_cyan = "#39a9d0",
-  magenta = "#c9aaff",
-  magenta2 = "#df90d8",
-  magenta3 = "#724a86",
-  pink = "#f4a9d7",
-  purple = "#b799f3",
-  orange = "#ffb35e",
-  yellow = "#fff08c",
-  dark_yellow = "#cfbf67",
-  green = "#7fe8bf",
-  bright_green = "#67f8cf",
-  dark_green = "#63bc98",
-  red = "#ff8fb0",
-  bright_red = "#ff7398",
-  git = { change = "#52d0ff", add = "#7fe8bf", delete = "#ff8fb0" },
-  gitSigns = { change = "#52d0ff", add = "#7fe8bf", delete = "#ff8fb0" },
-})
-
----@class Palette
-M.eldritch_glow_cobalt = extend_palette(M.eldritch_glow_aqua, {
-  bg_dark = "#0f1422",
-  bg = "#172034",
-  bg_highlight = "#223759",
-  terminal_black = "#2a4063",
-  fg = "#eaf2ff",
-  fg_dark = "#b6c7e6",
-  fg_gutter = "#324b72",
-  fg_gutter_light = "#6f94d2",
-  dark3 = "#6588c6",
-  comment = "#7894c3",
-  dark5 = "#5a79ad",
-  bright_cyan = "#84edff",
-  visual = "#3a5d96",
-  cyan = "#4fdaff",
-  dark_cyan = "#35afd2",
-  magenta = "#79bfff",
-  magenta2 = "#5ba8ff",
-  magenta3 = "#345d94",
-  pink = "#8bd5ff",
-  purple = "#74b0f8",
-  orange = "#ffbf81",
-  yellow = "#f1e18a",
-  dark_yellow = "#bfaf69",
-  green = "#63edc7",
-  bright_green = "#49f8d5",
-  dark_green = "#49c09f",
-  red = "#ff8f85",
-  bright_red = "#ff726f",
-  git = { change = "#4fdaff", add = "#63edc7", delete = "#ff8f85" },
-  gitSigns = { change = "#4fdaff", add = "#63edc7", delete = "#ff8f85" },
-})
-
----@class Palette
-M.eldritch_glow_emerald = extend_palette(M.eldritch_glow_aqua, {
-  bg_dark = "#0f171f",
-  bg = "#17242f",
-  bg_highlight = "#243747",
-  terminal_black = "#2d4256",
-  fg = "#e8f7f1",
-  fg_dark = "#b2d2ca",
-  fg_gutter = "#36506a",
-  fg_gutter_light = "#6da0c0",
-  dark3 = "#6593ae",
-  comment = "#739db3",
-  dark5 = "#5a8199",
-  bright_cyan = "#79f5e0",
-  visual = "#3c6681",
-  cyan = "#4ce8d0",
-  dark_cyan = "#35bca6",
-  magenta = "#72dcc9",
-  magenta2 = "#58cdb8",
-  magenta3 = "#337367",
-  pink = "#83ebd4",
-  purple = "#6fd0bc",
-  orange = "#ffc88a",
-  yellow = "#eef08e",
-  dark_yellow = "#bcc06d",
-  green = "#5af3b7",
-  bright_green = "#3fffc8",
-  dark_green = "#41c493",
-  red = "#ff9e82",
-  bright_red = "#ff7e68",
-  git = { change = "#4ce8d0", add = "#5af3b7", delete = "#ff9e82" },
-  gitSigns = { change = "#4ce8d0", add = "#5af3b7", delete = "#ff9e82" },
-})
-
----@class Palette
-M.eldritch_glow_amber = extend_palette(M.eldritch_glow_solar, {
-  bg_dark = "#13141e",
-  bg = "#1d2231",
-  bg_highlight = "#2a3550",
-  terminal_black = "#35415e",
-  fg = "#fff1da",
-  fg_dark = "#d7c8a8",
-  fg_gutter = "#415277",
-  fg_gutter_light = "#88a1d8",
-  dark3 = "#7b93c8",
-  comment = "#8797c1",
-  dark5 = "#6c81b1",
-  bright_cyan = "#89ebff",
-  visual = "#51679b",
-  cyan = "#60d6ff",
-  dark_cyan = "#46aed4",
-  magenta = "#cfb0ff",
-  magenta2 = "#e596e0",
-  magenta3 = "#7a518f",
-  pink = "#fdb3e3",
-  purple = "#c0a2f8",
-  orange = "#ffbc66",
-  yellow = "#fff39a",
-  dark_yellow = "#d1c871",
-  green = "#84ecbf",
-  bright_green = "#6cfccf",
-  dark_green = "#67bf9b",
-  red = "#ff97b8",
-  bright_red = "#ff7da2",
-  git = { change = "#60d6ff", add = "#84ecbf", delete = "#ff97b8" },
-  gitSigns = { change = "#60d6ff", add = "#84ecbf", delete = "#ff97b8" },
-})
-
----@class Palette
-M.eldritch_glow_arctic = extend_palette(M.eldritch_glow_cobalt, {
-  bg_dark = "#111826",
-  bg = "#1a2538",
-  bg_highlight = "#273d62",
-  terminal_black = "#315079",
-  fg = "#eef8ff",
-  fg_dark = "#bfd2ef",
-  fg_gutter = "#3a5a85",
-  fg_gutter_light = "#7ea6de",
-  dark3 = "#7398cf",
-  comment = "#86a5ce",
-  dark5 = "#6788b8",
-  bright_cyan = "#a2f4ff",
-  visual = "#466ca6",
-  cyan = "#76e8ff",
-  dark_cyan = "#58c0e2",
-  magenta = "#9bcdff",
-  magenta2 = "#7cb7ff",
-  magenta3 = "#426fa7",
-  pink = "#a8dfff",
-  purple = "#94c3ff",
-  orange = "#ffc88f",
-  yellow = "#f5e899",
-  dark_yellow = "#c2b877",
-  green = "#7cf3d2",
-  bright_green = "#67ffe2",
-  dark_green = "#59cab0",
-  red = "#ffa39a",
-  bright_red = "#ff8584",
-  git = { change = "#76e8ff", add = "#7cf3d2", delete = "#ffa39a" },
-  gitSigns = { change = "#76e8ff", add = "#7cf3d2", delete = "#ffa39a" },
-})
-
----@class Palette
-M.eldritch_glow_crimson = extend_palette(M.eldritch_glow_solar, {
-  bg_dark = "#13131f",
-  bg = "#1e2030",
-  bg_highlight = "#2b3350",
-  terminal_black = "#364062",
-  fg = "#fff0e3",
-  fg_dark = "#d7c3b5",
-  fg_gutter = "#425078",
-  fg_gutter_light = "#8ca3d9",
-  dark3 = "#7f95ca",
-  comment = "#8694bd",
-  dark5 = "#7083b2",
-  bright_cyan = "#85e6ff",
-  visual = "#526597",
-  cyan = "#5fd0ff",
-  dark_cyan = "#45abd2",
-  magenta = "#d2b1ff",
-  magenta2 = "#e38ede",
-  magenta3 = "#7a4d8f",
-  pink = "#ffb0df",
-  purple = "#c1a1fa",
-  orange = "#ffb56b",
-  yellow = "#fff096",
-  dark_yellow = "#cdc66f",
-  green = "#7be7bf",
-  bright_green = "#63f8cf",
-  dark_green = "#60bb9a",
-  red = "#ff95b8",
-  bright_red = "#ff789f",
-  git = { change = "#5fd0ff", add = "#7be7bf", delete = "#ff95b8" },
-  gitSigns = { change = "#5fd0ff", add = "#7be7bf", delete = "#ff95b8" },
-})
-
----@class Palette
-M.eldritch_glow_violet = extend_palette(M.eldritch_glow_aqua, {
-  bg_dark = "#111225",
-  bg = "#1a1b33",
-  bg_highlight = "#28234a",
-  terminal_black = "#34305a",
-  fg = "#f2ecff",
-  fg_dark = "#c5b8e7",
-  fg_gutter = "#403b69",
-  fg_gutter_light = "#8e7fd3",
-  dark3 = "#8373c8",
-  comment = "#9789ce",
-  dark5 = "#7466b7",
-  bright_cyan = "#8cf0ff",
-  visual = "#564f8d",
-  cyan = "#62ddff",
-  dark_cyan = "#45b5db",
-  magenta = "#d2b1ff",
-  magenta2 = "#f08de6",
-  magenta3 = "#7d4b8a",
-  pink = "#ff9cda",
-  purple = "#c39fff",
-  orange = "#ffc382",
-  yellow = "#f5dd94",
-  dark_yellow = "#c9b574",
-  green = "#7cf0c6",
-  bright_green = "#66ffd5",
-  dark_green = "#5ac4a3",
-  red = "#ff8fb7",
-  bright_red = "#ff76a4",
-  git = { change = "#62ddff", add = "#7cf0c6", delete = "#ff8fb7" },
-  gitSigns = { change = "#62ddff", add = "#7cf0c6", delete = "#ff8fb7" },
-})
-
----@class Palette
-M.eldritch_glow_orchid = extend_palette(M.eldritch_glow_violet, {
-  bg_dark = "#130f21",
-  bg = "#1d1730",
-  bg_highlight = "#2d2249",
-  terminal_black = "#3b2d5d",
-  fg = "#f6ecff",
-  fg_dark = "#d1bde6",
-  fg_gutter = "#44386d",
-  fg_gutter_light = "#9a84d7",
-  dark3 = "#8e77cc",
-  comment = "#a486c5",
-  dark5 = "#7f67bf",
-  bright_cyan = "#8fdbff",
-  visual = "#614f95",
-  cyan = "#61c9f2",
-  dark_cyan = "#459fc8",
-  magenta = "#e2b4ff",
-  magenta2 = "#ff86e3",
-  magenta3 = "#8e4f8f",
-  pink = "#ff95d5",
-  purple = "#d1a1ff",
-  orange = "#ffca89",
-  yellow = "#f7e29b",
-  dark_yellow = "#ccb97a",
-  green = "#7ee7c4",
-  bright_green = "#68f6d2",
-  dark_green = "#58be9f",
-  red = "#ff8ab4",
-  bright_red = "#ff709f",
-  git = { change = "#61c9f2", add = "#7ee7c4", delete = "#ff8ab4" },
-  gitSigns = { change = "#61c9f2", add = "#7ee7c4", delete = "#ff8ab4" },
-})
-
----@class Palette
-M.eldritch_glow_fuchsia = extend_palette(M.eldritch_glow_orchid, {
-  bg_dark = "#0f0d1f",
-  bg = "#17142b",
-  bg_highlight = "#241b3f",
-  terminal_black = "#2f244f",
-  fg = "#f7efff",
-  fg_dark = "#d1c2ea",
-  fg_gutter = "#3a315d",
-  fg_gutter_light = "#9a86dc",
-  dark3 = "#8f79cf",
-  comment = "#a48fd5",
-  dark5 = "#806bc0",
-  bright_cyan = "#9cefff",
-  visual = "#664f95",
-  cyan = "#78e2ff",
-  dark_cyan = "#53b9dc",
-  magenta = "#e7c2ff",
-  magenta2 = "#ffa6f3",
-  magenta3 = "#9258a0",
-  pink = "#ffb7eb",
-  purple = "#d7b1ff",
-  orange = "#ffd092",
-  yellow = "#fbe7a4",
-  dark_yellow = "#d0be81",
-  green = "#92f0d0",
-  bright_green = "#81ffe1",
-  dark_green = "#6dcbad",
-  red = "#ffa2ca",
-  bright_red = "#ff84b5",
-  git = { change = "#78e2ff", add = "#92f0d0", delete = "#ffa2ca" },
-  gitSigns = { change = "#78e2ff", add = "#92f0d0", delete = "#ffa2ca" },
-})
-
----@class Palette
 M.kanagawa = extend_palette(M.default, {
   bg_dark = "#0d1117",
   bg = "#16161d",
@@ -505,6 +165,21 @@ M.kanagawa = extend_palette(M.default, {
   bright_red = "#ff5d62",
   git = { change = "#658594", add = "#98bb6c", delete = "#e46876" },
   gitSigns = { change = "#658594", add = "#98bb6c", delete = "#e46876" },
+})
+
+---@class Palette
+M.kanagawa_azure = extend_palette(M.kanagawa, {
+  function_fg = "#7bcfff",
+})
+
+---@class Palette
+M.kanagawa_emerald = extend_palette(M.kanagawa, {
+  function_fg = "#89e0b5",
+})
+
+---@class Palette
+M.kanagawa_crimson = extend_palette(M.kanagawa, {
+  function_fg = "#f39ab5",
 })
 
 ---@class Palette
@@ -869,43 +544,11 @@ M.kanagawa_fusion_pop = extend_palette(M.kanagawa_fusion, {
 })
 
 ---@class Palette
-M.kanagawa_fusion_glow = extend_palette(M.kanagawa_fusion_pop, {
-  bg_dark = "#0a0f16",
-  bg = "#111723",
-  bg_highlight = "#1d2f4c",
-  fg = "#ece5cd",
-  fg_dark = "#c4bba4",
-  fg_gutter_light = "#7793c0",
-  dark3 = "#7290bc",
-  comment = "#868178",
-  dark5 = "#6581ac",
-  bright_cyan = "#93f3ff",
-  visual = "#3f638c",
-  cyan = "#62e7ff",
-  dark_cyan = "#45c4df",
-  magenta = "#d7bcff",
-  magenta2 = "#e893e1",
-  magenta3 = "#714f88",
-  pink = "#ffb3e0",
-  purple = "#c3a9ff",
-  orange = "#ffc587",
-  yellow = "#f8d98f",
-  dark_yellow = "#cdaa68",
-  green = "#89f5d7",
-  bright_green = "#74ffe7",
-  dark_green = "#65c8ae",
-  red = "#ff9abe",
-  bright_red = "#ff7aa5",
-  git = { change = "#62e7ff", add = "#89f5d7", delete = "#ff9abe" },
-  gitSigns = { change = "#62e7ff", add = "#89f5d7", delete = "#ff9abe" },
-})
-
----@class Palette
 M.kanagawa_fusion_purple = extend_palette(M.kanagawa_fusion_pop, {
-  bg_dark = "#0b0f1a",
-  bg = "#121629",
-  bg_highlight = "#231f47",
-  terminal_black = "#2f2b5a",
+  bg_dark = "#0b1017",
+  bg = "#121823",
+  bg_highlight = "#1f3150",
+  terminal_black = "#273750",
   fg = "#efe7d1",
   fg_dark = "#c7bda8",
   fg_gutter_light = "#7b8ec0",
@@ -929,16 +572,17 @@ M.kanagawa_fusion_purple = extend_palette(M.kanagawa_fusion_pop, {
   dark_green = "#5bc0a3",
   red = "#ff98bb",
   bright_red = "#ff79a4",
+  function_fg = "#d8bcff",
   git = { change = "#67dbff", add = "#7ceac9", delete = "#ff98bb" },
   gitSigns = { change = "#67dbff", add = "#7ceac9", delete = "#ff98bb" },
 })
 
 ---@class Palette
 M.kanagawa_fusion_green = extend_palette(M.kanagawa_fusion_pop, {
-  bg_dark = "#0a1117",
-  bg = "#111b25",
-  bg_highlight = "#1d3445",
-  terminal_black = "#29475a",
+  bg_dark = "#0b1017",
+  bg = "#121823",
+  bg_highlight = "#1f3150",
+  terminal_black = "#273750",
   fg = "#e8e8d1",
   fg_dark = "#bcc3ab",
   fg_gutter_light = "#6d95bb",
@@ -962,6 +606,7 @@ M.kanagawa_fusion_green = extend_palette(M.kanagawa_fusion_pop, {
   dark_green = "#67c8a6",
   red = "#ffa888",
   bright_red = "#ff866f",
+  function_fg = "#8bf7c6",
   git = { change = "#5ce8d8", add = "#8bf7c6", delete = "#ffa888" },
   gitSigns = { change = "#5ce8d8", add = "#8bf7c6", delete = "#ffa888" },
 })
@@ -998,6 +643,21 @@ M.tokyonight = extend_palette(M.default, {
   bright_red = "#ff637f",
   git = { change = "#7aa2f7", add = "#9ece6a", delete = "#f7768e" },
   gitSigns = { change = "#7aa2f7", add = "#9ece6a", delete = "#f7768e" },
+})
+
+---@class Palette
+M.tokyonight_azure = extend_palette(M.tokyonight, {
+  function_fg = "#7dcfff",
+})
+
+---@class Palette
+M.tokyonight_emerald = extend_palette(M.tokyonight, {
+  function_fg = "#73daca",
+})
+
+---@class Palette
+M.tokyonight_crimson = extend_palette(M.tokyonight, {
+  function_fg = "#f776c6",
 })
 
 ---@class Palette
@@ -1218,25 +878,6 @@ M.tokyonight_fusion_pop = extend_palette(M.tokyonight_fusion, {
 })
 
 ---@class Palette
-M.tokyonight_fusion_glow = extend_palette(M.tokyonight_fusion_pop, {
-  bright_cyan = "#98f1ff",
-  cyan = "#78e6ff",
-  dark_cyan = "#58c8e8",
-  magenta = "#d9c0ff",
-  magenta2 = "#e79ce2",
-  pink = "#ffb2de",
-  purple = "#c9b0ff",
-  yellow = "#f4dc98",
-  green = "#89f5d4",
-  bright_green = "#75ffe4",
-  dark_green = "#64ccb5",
-  red = "#ff9ebd",
-  bright_red = "#ff7ca5",
-  git = { change = "#78e6ff", add = "#89f5d4", delete = "#ff9ebd" },
-  gitSigns = { change = "#78e6ff", add = "#89f5d4", delete = "#ff9ebd" },
-})
-
----@class Palette
 M.rosepine = extend_palette(M.default, {
   bg_dark = "#16141f",
   bg = "#191724",
@@ -1268,6 +909,21 @@ M.rosepine = extend_palette(M.default, {
   bright_red = "#eb6f92",
   git = { change = "#9ccfd8", add = "#9ccfd8", delete = "#eb6f92" },
   gitSigns = { change = "#9ccfd8", add = "#9ccfd8", delete = "#eb6f92" },
+})
+
+---@class Palette
+M.rosepine_azure = extend_palette(M.rosepine, {
+  function_fg = "#9ccfd8",
+})
+
+---@class Palette
+M.rosepine_emerald = extend_palette(M.rosepine, {
+  function_fg = "#31748f",
+})
+
+---@class Palette
+M.rosepine_crimson = extend_palette(M.rosepine, {
+  function_fg = "#eb6f92",
 })
 
 ---@class Palette
@@ -1601,6 +1257,21 @@ M.gruvbox = extend_palette(M.default, {
 })
 
 ---@class Palette
+M.gruvbox_azure = extend_palette(M.gruvbox, {
+  function_fg = "#83a598",
+})
+
+---@class Palette
+M.gruvbox_emerald = extend_palette(M.gruvbox, {
+  function_fg = "#b8bb26",
+})
+
+---@class Palette
+M.gruvbox_crimson = extend_palette(M.gruvbox, {
+  function_fg = "#d3869b",
+})
+
+---@class Palette
 M.gruvbox_soft = extend_palette(M.gruvbox, {
   bg_dark = "#25201d",
   bg = "#32302f",
@@ -1799,25 +1470,6 @@ M.gruvbox_fusion_pop = extend_palette(M.gruvbox_fusion, {
 })
 
 ---@class Palette
-M.gruvbox_fusion_glow = extend_palette(M.gruvbox_fusion_pop, {
-  bright_cyan = "#99efe6",
-  cyan = "#81e0d7",
-  dark_cyan = "#64c3bb",
-  magenta = "#ddbcf4",
-  magenta2 = "#eca0df",
-  pink = "#ffb4d8",
-  purple = "#d2b2ea",
-  yellow = "#f5dda2",
-  green = "#88f2d5",
-  bright_green = "#74ffe4",
-  dark_green = "#65cbb4",
-  red = "#ff9dbc",
-  bright_red = "#ff79a0",
-  git = { change = "#81e0d7", add = "#88f2d5", delete = "#ff9dbc" },
-  gitSigns = { change = "#81e0d7", add = "#88f2d5", delete = "#ff9dbc" },
-})
-
----@class Palette
 M.vscode_dark = extend_palette(M.default, {
   bg_dark = "#16181d",
   bg = "#1e1e1e",
@@ -1849,6 +1501,21 @@ M.vscode_dark = extend_palette(M.default, {
   bright_red = "#ff6b6b",
   git = { change = "#4fc1ff", add = "#9ec8a3", delete = "#f44747" },
   gitSigns = { change = "#4fc1ff", add = "#9ec8a3", delete = "#f44747" },
+})
+
+---@class Palette
+M.vscode_dark_azure = extend_palette(M.vscode_dark, {
+  function_fg = "#4fc1ff",
+})
+
+---@class Palette
+M.vscode_dark_emerald = extend_palette(M.vscode_dark, {
+  function_fg = "#9ec8a3",
+})
+
+---@class Palette
+M.vscode_dark_crimson = extend_palette(M.vscode_dark, {
+  function_fg = "#f44747",
 })
 
 ---@class Palette
@@ -1959,25 +1626,6 @@ M.vscode_dark_fusion_pop = extend_palette(M.vscode_dark_fusion, {
   bright_red = "#ff7298",
   git = { change = "#73ddff", add = "#81ebcc", delete = "#ff8eb0" },
   gitSigns = { change = "#73ddff", add = "#81ebcc", delete = "#ff8eb0" },
-})
-
----@class Palette
-M.vscode_dark_fusion_glow = extend_palette(M.vscode_dark_fusion_pop, {
-  bright_cyan = "#a3f1ff",
-  cyan = "#84e4ff",
-  dark_cyan = "#63c7ee",
-  magenta = "#e8bafc",
-  magenta2 = "#dda0e6",
-  pink = "#ffcdf1",
-  purple = "#e0cfff",
-  yellow = "#f7e1aa",
-  green = "#90f0d4",
-  bright_green = "#7bffe5",
-  dark_green = "#66cbb3",
-  red = "#ff9bbc",
-  bright_red = "#ff79a1",
-  git = { change = "#84e4ff", add = "#90f0d4", delete = "#ff9bbc" },
-  gitSigns = { change = "#84e4ff", add = "#90f0d4", delete = "#ff9bbc" },
 })
 
 ---@return ColorScheme
