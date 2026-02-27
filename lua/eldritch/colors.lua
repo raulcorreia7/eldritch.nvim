@@ -1686,4 +1686,169 @@ function M.setup()
   return colors
 end
 
+---@class Palette
+M.fusion_kanagawa = extend_palette(M.darker, {
+  bg_dark = "#0d1017",
+  bg = "#161b24",
+  bg_highlight = "#242e42",
+  fg = "#e8e2ca",
+  fg_dark = "#b8b19b",
+  fg_gutter_light = "#6880a8",
+  comment = "#7a8ab0",
+  bright_cyan = "#7be8ff",
+  cyan = "#52d8ff",
+  dark_cyan = "#3ab0cf",
+  magenta = "#c8a8f8",
+  magenta2 = "#d888d0",
+  magenta3 = "#5a4880",
+  pink = "#f898c8",
+  purple = "#b890f0",
+  orange = "#ffb878",
+  yellow = "#f4d088",
+  dark_yellow = "#c8a058",
+  green = "#70ecb8",
+  bright_green = "#58f8c8",
+  dark_green = "#48b890",
+  red = "#f888a8",
+  bright_red = "#ff6888",
+  git = { change = "#52d8ff", add = "#70ecb8", delete = "#f888a8" },
+  gitSigns = { change = "#52d8ff", add = "#70ecb8", delete = "#f888a8" },
+})
+
+M.fusion_kanagawa_azure = extend_palette(M.fusion_kanagawa, { function_fg = "#52d8ff" })
+M.fusion_kanagawa_emerald = extend_palette(M.fusion_kanagawa, { function_fg = "#70ecb8" })
+M.fusion_kanagawa_crimson = extend_palette(M.fusion_kanagawa, { function_fg = "#f888a8" })
+
+---@class Palette
+M.fusion_tokyonight = extend_palette(M.darker, {
+  bg_dark = "#0c0e18",
+  bg = "#151828",
+  bg_highlight = "#222840",
+  fg = "#e0e8ff",
+  fg_dark = "#a8b0d8",
+  fg_gutter_light = "#6080c0",
+  comment = "#6080b8",
+  bright_cyan = "#70e8ff",
+  cyan = "#48d0ff",
+  dark_cyan = "#38a8d8",
+  magenta = "#b890f8",
+  magenta2 = "#c868e8",
+  magenta3 = "#584878",
+  pink = "#f078c0",
+  purple = "#a880f0",
+  orange = "#ffa868",
+  yellow = "#e8d078",
+  dark_yellow = "#b8a058",
+  green = "#68e898",
+  bright_green = "#50f888",
+  dark_green = "#40b878",
+  red = "#f06878",
+  bright_red = "#ff4860",
+  git = { change = "#48d0ff", add = "#68e898", delete = "#f06878" },
+  gitSigns = { change = "#48d0ff", add = "#68e898", delete = "#f06878" },
+})
+
+M.fusion_tokyonight_azure = extend_palette(M.fusion_tokyonight, { function_fg = "#48d0ff" })
+M.fusion_tokyonight_emerald = extend_palette(M.fusion_tokyonight, { function_fg = "#68e898" })
+M.fusion_tokyonight_crimson = extend_palette(M.fusion_tokyonight, { function_fg = "#f078c0" })
+
+---@class Palette
+M.fusion_rosepine = extend_palette(M.darker, {
+  bg_dark = "#0e0c16",
+  bg = "#181520",
+  bg_highlight = "#262030",
+  fg = "#e8e0f4",
+  fg_dark = "#b0a8c8",
+  fg_gutter_light = "#7870a0",
+  comment = "#6888a8",
+  bright_cyan = "#90d8e0",
+  cyan = "#70c0c8",
+  dark_cyan = "#589898",
+  magenta = "#c8a0e8",
+  magenta2 = "#d880d0",
+  magenta3 = "#584868",
+  pink = "#e87898",
+  purple = "#b890d8",
+  orange = "#e8a858",
+  yellow = "#e8c868",
+  dark_yellow = "#b89850",
+  green = "#80c8a0",
+  bright_green = "#68d890",
+  dark_green = "#509878",
+  red = "#d86080",
+  bright_red = "#e84870",
+  git = { change = "#70c0c8", add = "#80c8a0", delete = "#d86080" },
+  gitSigns = { change = "#70c0c8", add = "#80c8a0", delete = "#d86080" },
+})
+
+M.fusion_rosepine_azure = extend_palette(M.fusion_rosepine, { function_fg = "#70c0c8" })
+M.fusion_rosepine_emerald = extend_palette(M.fusion_rosepine, { function_fg = "#80c8a0" })
+M.fusion_rosepine_crimson = extend_palette(M.fusion_rosepine, { function_fg = "#e87898" })
+
+---@class Palette
+M.fusion_gruvbox = extend_palette(M.darker, {
+  bg_dark = "#0f0d0a",
+  bg = "#1a1814",
+  bg_highlight = "#282420",
+  fg = "#e8d8b0",
+  fg_dark = "#b0a080",
+  fg_gutter_light = "#807060",
+  comment = "#807868",
+  bright_cyan = "#88c8a8",
+  cyan = "#68a888",
+  dark_cyan = "#508868",
+  magenta = "#c890c8",
+  magenta2 = "#d870b0",
+  magenta3 = "#584858",
+  pink = "#c87898",
+  purple = "#a880b0",
+  orange = "#e89848",
+  yellow = "#d8b048",
+  dark_yellow = "#a88838",
+  green = "#a8c048",
+  bright_green = "#b8d058",
+  dark_green = "#889838",
+  red = "#e84848",
+  bright_red = "#f83030",
+  git = { change = "#68a888", add = "#a8c048", delete = "#e84848" },
+  gitSigns = { change = "#68a888", add = "#a8c048", delete = "#e84848" },
+})
+
+M.fusion_gruvbox_azure = extend_palette(M.fusion_gruvbox, { function_fg = "#68a888" })
+M.fusion_gruvbox_emerald = extend_palette(M.fusion_gruvbox, { function_fg = "#a8c048" })
+M.fusion_gruvbox_crimson = extend_palette(M.fusion_gruvbox, { function_fg = "#c87898" })
+
+---@class Palette
+M.fusion_vscode = extend_palette(M.darker, {
+  bg_dark = "#0a0c10",
+  bg = "#12161e",
+  bg_highlight = "#1e2430",
+  fg = "#d8dce8",
+  fg_dark = "#a0a8b8",
+  fg_gutter_light = "#586880",
+  comment = "#589848",
+  bright_cyan = "#80d8ff",
+  cyan = "#58c8f8",
+  dark_cyan = "#3898c8",
+  magenta = "#b880d8",
+  magenta2 = "#c860c0",
+  magenta3 = "#504868",
+  pink = "#c8a0d0",
+  purple = "#a890f0",
+  orange = "#c89068",
+  yellow = "#d8c060",
+  dark_yellow = "#a89048",
+  green = "#88c888",
+  bright_green = "#78d878",
+  dark_green = "#589858",
+  red = "#e04848",
+  bright_red = "#f03030",
+  git = { change = "#58c8f8", add = "#88c888", delete = "#e04848" },
+  gitSigns = { change = "#58c8f8", add = "#88c888", delete = "#e04848" },
+})
+
+M.fusion_vscode_azure = extend_palette(M.fusion_vscode, { function_fg = "#58c8f8" })
+M.fusion_vscode_emerald = extend_palette(M.fusion_vscode, { function_fg = "#88c888" })
+M.fusion_vscode_crimson = extend_palette(M.fusion_vscode, { function_fg = "#c8a0d0" })
+
 return M

@@ -113,6 +113,16 @@ vim.cmd[[colorscheme eldritch]]
 - `eldritch-vscode-dark-emerald`
 - `eldritch-vscode-dark-crimson`
 
+*Eldritch Dark + Theme Fusion (new):*
+
+Eldritch dark base with popping accent colors from each theme:
+
+- `eldritch-fusion-kanagawa` (+ azure/emerald/crimson)
+- `eldritch-fusion-tokyonight` (+ azure/emerald/crimson)
+- `eldritch-fusion-rosepine` (+ azure/emerald/crimson)
+- `eldritch-fusion-gruvbox` (+ azure/emerald/crimson)
+- `eldritch-fusion-vscode` (+ azure/emerald/crimson)
+
 #### [Lualine](https://github.com/nvim-lualine/lualine.nvim)
 
 ```lua

@@ -11,7 +11,9 @@
   - **Gruvbox**: azure/emerald/crimson + fusion
   - **VSCode Dark**: azure/emerald/crimson
 - Added `function_fg` palette property for customizable function colors
-- Fusion variants use consistent backgrounds with colored accents
+- Added Eldritch Dark + Theme Fusion variants (eldritch dark base with popping accents):
+  - `fusion_kanagawa`, `fusion_tokyonight`, `fusion_rosepine`, `fusion_gruvbox`, `fusion_vscode`
+  - Each with azure/emerald/crimson accent variants
 
 ### Upstream (original theme)
 
