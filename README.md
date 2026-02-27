@@ -59,6 +59,39 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
 vim.cmd[[colorscheme eldritch]]
 ```
 
+#### Available variants
+
+Core variants:
+
+- `eldritch`
+- `eldritch-dark`
+- `eldritch-minimal`
+
+Fusion variants:
+
+- `eldritch-kanagawa`
+- `eldritch-kanagawa-fusion`
+- `eldritch-kanagawa-fusion-mid`
+- `eldritch-kanagawa-fusion-pop`
+- `eldritch-kanagawa-fusion-glow`
+- `eldritch-kanagawa-fusion-purple`
+- `eldritch-kanagawa-fusion-green`
+- `eldritch-tokyonight-fusion`
+- `eldritch-gruvbox-fusion`
+
+Glow variants:
+
+- `eldritch-glow-aqua`
+- `eldritch-glow-solar`
+- `eldritch-glow-cobalt`
+- `eldritch-glow-emerald`
+- `eldritch-glow-amber`
+- `eldritch-glow-arctic`
+- `eldritch-glow-crimson`
+- `eldritch-glow-violet`
+- `eldritch-glow-orchid`
+- `eldritch-glow-fuchsia`
+
 #### [Lualine](https://github.com/nvim-lualine/lualine.nvim)
 
 ```lua

@@ -257,9 +257,9 @@ function M.setup()
     ["@markup.strikethrough"] = { strikethrough = true },
     ["@markup.underline"] = { underline = true },
     ["@markup.heading"] = { link = "Title" },
-    ["@comment.note"] = { fg = c.pink },
+    ["@comment.note"] = { fg = c.cyan },
     ["@comment.error"] = { fg = c.red },
-    ["@comment.hint"] = { fg = c.pink },
+    ["@comment.hint"] = { fg = c.dark_cyan },
     ["@comment.info"] = { fg = c.yellow },
     ["@comment.warning"] = { fg = c.orange },
     ["@comment.todo"] = { fg = c.todo },
@@ -271,49 +271,65 @@ function M.setup()
     --- Misc
     -- TODO:
     -- ["@comment.documentation"] = { },
-    ["@operator"] = { fg = c.cyan }, -- For any operator: `+`, but also `->` and `*` in C.
+    ["@operator"] = { fg = c.fg_dark }, -- For any operator: `+`, but also `->` and `*` in C.
 
     --- Punctuation
-    ["@punctuation.delimiter"] = { fg = c.cyan }, -- For delimiters ie: `.`
+    ["@punctuation.delimiter"] = { fg = c.fg_dark }, -- For delimiters ie: `.`
     ["@punctuation.bracket"] = { fg = c.fg_dark }, -- For brackets and parens.
-    ["@punctuation.special"] = { fg = c.cyan }, -- For special symbols (e.g. `{}` in string interpolation)
-    ["@markup.list"] = { fg = c.cyan }, -- For special punctutation that does not fall in the catagories before.
+    ["@punctuation.special"] = { fg = c.comment }, -- For special symbols (e.g. `{}` in string interpolation)
+    ["@markup.list"] = { fg = c.comment }, -- For special punctutation that does not fall in the catagories before.
     ["@markup.list.markdown"] = { fg = c.orange, bold = true },
 
     --- Literals
     ["@string.documentation"] = { fg = c.yellow },
     ["@string.html"] = { fg = c.dark_yellow },
-    ["@string.regexp"] = { fg = c.cyan }, -- For regexes.
+    ["@string.regexp"] = { fg = c.dark_yellow }, -- For regexes.
     ["@string.escape"] = { fg = c.magenta }, -- For escape characters within a string.
 
     --- Functions
     ["@constructor"] = { fg = c.magenta }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-    ["@variable.parameter"] = { fg = c.purple }, -- For parameters of a function.
-    ["@variable.parameter.builtin"] = { fg = util.lighten(c.purple, 0.8) }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
+    ["@variable.parameter"] = { fg = c.fg_dark }, -- For parameters of a function.
+    ["@variable.parameter.builtin"] = { fg = util.lighten(c.fg_dark, 0.75) }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
 
     --- Keywords
     ["@keyword"] = { fg = c.green, style = options.styles.keywords }, -- For keywords that don't fall in previous categories.
     ["@keyword.function"] = { fg = c.magenta, style = options.styles.functions }, -- For keywords used to define a fuction.
 
-    ["@label"] = { fg = c.cyan }, -- For labels: `label:` in C and `:label:` in Lua.
+    ["@label"] = { fg = c.orange }, -- For labels: `label:` in C and `:label:` in Lua.
 
     --- Types
     ["@type.builtin"] = { fg = util.darken(c.cyan, 0.8) },
-    ["@variable.member"] = { fg = c.purple }, -- For fields.
-    ["@property"] = { fg = c.purple },
+    ["@variable.member"] = { fg = c.cyan }, -- For fields.
+    ["@property"] = { fg = c.cyan },
 
     --- Identifiers
-    ["@variable"] = { fg = c.cyan, style = options.styles.variables }, -- Any variable name that does not have another highlight.
-    ["@variable.builtin"] = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
-    ["@module.builtin"] = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
+    ["@variable"] = { fg = c.fg, style = options.styles.variables }, -- Any variable name that does not have another highlight.
+    ["@variable.builtin"] = { fg = c.magenta }, -- Variable names that are defined by the languages, like `this` or `self`.
+    ["@module.builtin"] = { fg = c.magenta }, -- Variable names that are defined by the languages, like `this` or `self`.
 
     --- Text
     -- ["@markup.raw.markdown"] = { fg = c.cyan },
     ["@markup.raw.markdown_inline"] = { bg = c.terminal_black, fg = c.cyan },
     ["@markup.link"] = { fg = c.cyan },
 
-    ["@markup.list.unchecked"] = { fg = c.cyan }, -- For brackets and parens.
-    ["@markup.list.checked"] = { fg = c.purple }, -- For brackets and parens.
+    ["@markup.list.unchecked"] = { fg = c.comment }, -- For brackets and parens.
+    ["@markup.list.checked"] = { fg = c.cyan }, -- For brackets and parens.
+    ["@markup.quote"] = { fg = c.orange },
+    ["@markup.raw.block"] = { fg = c.cyan },
+
+    ["@keyword.modifier"] = { link = "@keyword" },
+    ["@keyword.type"] = { link = "@keyword" },
+    ["@keyword.export"] = { link = "@keyword" },
+
+    ["@string.special"] = { fg = c.dark_cyan },
+    ["@string.special.path"] = { fg = c.dark_cyan },
+    ["@string.special.symbol"] = { fg = c.pink },
+    ["@string.special.url"] = { fg = c.dark_cyan, underline = true },
+    ["@character.printf"] = { fg = c.pink },
+    ["@punctuation.delimiter.regex"] = { link = "@string.regexp" },
+
+    ["@constructor.lua"] = { link = "@punctuation.bracket" },
+    ["@markup.italic"] = { italic = true },
 
     ["@diff.plus"] = { link = "DiffAdd" },
     ["@diff.minus"] = { link = "DiffDelete" },
@@ -337,9 +353,17 @@ function M.setup()
     ["@lsp.type.escapeSequence"] = { link = "@string.escape" },
     ["@lsp.type.formatSpecifier"] = { link = "@markup.list" },
     ["@lsp.type.generic"] = { link = "@variable" },
-    ["@lsp.type.interface"] = { fg = util.lighten(c.cyan, 0.7) },
+    ["@lsp.type.interface"] = { link = "@type" },
     ["@lsp.type.keyword"] = { link = "@keyword" },
     ["@lsp.type.lifetime"] = { link = "@keyword.storage" },
+    ["@lsp.type.class"] = { link = "@type" },
+    ["@lsp.type.struct"] = { link = "@type" },
+    ["@lsp.type.type"] = { link = "@type" },
+    ["@lsp.type.typeParameter"] = { link = "@type.definition" },
+    ["@lsp.type.macro"] = { link = "@function.macro" },
+    ["@lsp.type.modifier"] = { link = "@keyword.modifier" },
+    ["@lsp.type.regexp"] = { link = "@string.regexp" },
+    ["@lsp.type.punctuation"] = { link = "@punctuation.delimiter" },
     ["@lsp.type.namespace"] = { link = "@module" },
     ["@lsp.type.number"] = { link = "@number" },
     ["@lsp.type.operator"] = { link = "@operator" },
@@ -362,18 +386,58 @@ function M.setup()
     ["@lsp.typemod.operator.injected"] = { link = "@operator" },
     ["@lsp.typemod.string.injected"] = { link = "@string" },
     ["@lsp.typemod.struct.defaultLibrary"] = { link = "@type.builtin" },
-    ["@lsp.typemod.type.defaultLibrary"] = { fg = util.darken(c.cyan, 0.8) },
-    ["@lsp.typemod.typeAlias.defaultLibrary"] = { fg = util.darken(c.cyan, 0.8) },
+    ["@lsp.typemod.type.defaultLibrary"] = { link = "@type.builtin" },
+    ["@lsp.typemod.typeAlias.defaultLibrary"] = { link = "@type.builtin" },
     ["@lsp.typemod.variable.callable"] = { link = "@function" },
     ["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
     ["@lsp.typemod.variable.injected"] = { link = "@variable" },
     ["@lsp.typemod.variable.static"] = { link = "@constant" },
+    ["@lsp.typemod.variable.readonly"] = { link = "@constant" },
+    ["@lsp.typemod.property.readonly"] = { link = "@constant" },
+    ["@lsp.typemod.function.readonly"] = { link = "@function" },
+    ["@lsp.typemod.method.readonly"] = { link = "@function.method" },
+    ["@lsp.typemod.parameter.readonly"] = { link = "@variable.parameter" },
+    ["@lsp.typemod.keyword.documentation"] = { link = "@comment" },
+    ["@lsp.mod.readonly"] = { link = "@constant" },
+    ["@lsp.mod.defaultLibrary"] = { link = "@variable.builtin" },
+    ["@lsp.mod.deprecated"] = { strikethrough = true },
+    ["@lsp.mod.documentation"] = { link = "@comment" },
     -- NOTE: maybe add these with distinct highlights?
     -- ["@lsp.typemod.variable.globalScope"] (global variables)
 
     -- Python
     ["@lsp.type.namespace.python"] = { link = "@variable" },
     ["@function.builtin.python"] = { link = "@function" },
+
+    -- Legacy Treesitter aliases
+    ["@parameter"] = { link = "@variable.parameter" },
+    ["@field"] = { link = "@variable.member" },
+    ["@namespace"] = { link = "@module" },
+    ["@float"] = { link = "@number.float" },
+    ["@symbol"] = { link = "@string.special.symbol" },
+    ["@string.regex"] = { link = "@string.regexp" },
+    ["@text"] = { link = "@markup" },
+    ["@text.strong"] = { link = "@markup.strong" },
+    ["@text.emphasis"] = { link = "@markup.emphasis" },
+    ["@text.underline"] = { link = "@markup.underline" },
+    ["@text.strike"] = { link = "@markup.strikethrough" },
+    ["@text.uri"] = { link = "@markup.link.url" },
+    ["@text.math"] = { link = "@markup.math" },
+    ["@text.environment"] = { link = "@markup.environment" },
+    ["@text.environment.name"] = { link = "@markup.environment.name" },
+    ["@text.title"] = { link = "@markup.heading" },
+    ["@text.literal"] = { link = "@markup.raw" },
+    ["@text.reference"] = { link = "@markup.link" },
+    ["@text.todo"] = { link = "@comment.todo" },
+    ["@text.note"] = { link = "@comment.note" },
+    ["@text.warning"] = { link = "@comment.warning" },
+    ["@text.danger"] = { link = "@comment.error" },
+    ["@method"] = { link = "@function.method" },
+    ["@method.call"] = { link = "@function.method.call" },
+    ["@type.qualifier"] = { link = "@keyword.modifier" },
+    ["@storageclass"] = { link = "@keyword.storage" },
+    ["@conditional"] = { link = "@keyword.conditional" },
+    ["@repeat"] = { link = "@keyword.repeat" },
 
     -- ts-rainbow
     rainbowcol1 = { fg = c.red },
@@ -848,6 +912,70 @@ function M.setup()
     NoiceLspProgressClient = { fg = c.purple },
     NoiceMini = { bg = c.bg_highlight },
 
+    -- Snacks
+    SnacksNormal = { link = "NormalFloat" },
+    SnacksNormalNC = { link = "NormalFloat" },
+    SnacksWinBar = { fg = c.cyan, bg = bg_float_configured },
+    SnacksWinBarNC = { fg = c.comment, bg = bg_float_configured },
+
+    SnacksNotifierDebug = { link = "NotifyDEBUGBody" },
+    SnacksNotifierBorderDebug = { link = "NotifyDEBUGBorder" },
+    SnacksNotifierIconDebug = { link = "NotifyDEBUGIcon" },
+    SnacksNotifierTitleDebug = { link = "NotifyDEBUGTitle" },
+    SnacksNotifierError = { link = "NotifyERRORBody" },
+    SnacksNotifierBorderError = { link = "NotifyERRORBorder" },
+    SnacksNotifierIconError = { link = "NotifyERRORIcon" },
+    SnacksNotifierTitleError = { link = "NotifyERRORTitle" },
+    SnacksNotifierInfo = { link = "NotifyINFOBody" },
+    SnacksNotifierBorderInfo = { link = "NotifyINFOBorder" },
+    SnacksNotifierIconInfo = { link = "NotifyINFOIcon" },
+    SnacksNotifierTitleInfo = { link = "NotifyINFOTitle" },
+    SnacksNotifierTrace = { link = "NotifyTRACEBody" },
+    SnacksNotifierBorderTrace = { link = "NotifyTRACEBorder" },
+    SnacksNotifierIconTrace = { link = "NotifyTRACEIcon" },
+    SnacksNotifierTitleTrace = { link = "NotifyTRACETitle" },
+    SnacksNotifierWarn = { link = "NotifyWARNBody" },
+    SnacksNotifierBorderWarn = { link = "NotifyWARNBorder" },
+    SnacksNotifierIconWarn = { link = "NotifyWARNIcon" },
+    SnacksNotifierTitleWarn = { link = "NotifyWARNTitle" },
+
+    SnacksDashboardNormal = { link = "Normal" },
+    SnacksDashboardDesc = { fg = c.cyan },
+    SnacksDashboardDir = { fg = c.comment },
+    SnacksDashboardFile = { fg = c.fg_dark },
+    SnacksDashboardFooter = { fg = c.yellow, italic = true },
+    SnacksDashboardHeader = { fg = c.cyan },
+    SnacksDashboardIcon = { fg = c.pink, bold = true },
+    SnacksDashboardKey = { fg = c.orange },
+    SnacksDashboardSpecial = { fg = c.magenta },
+    SnacksDashboardTitle = { fg = c.cyan, bold = true },
+
+    SnacksIndent = { fg = c.fg_gutter, nocombine = true },
+    SnacksIndentScope = { fg = c.cyan, nocombine = true },
+
+    SnacksInputIcon = { fg = c.cyan },
+    SnacksInputBorder = { fg = c.cyan, bg = bg_float_configured },
+    SnacksInputTitle = { fg = c.cyan, bg = bg_float_configured },
+
+    SnacksPicker = { fg = c.fg, bg = bg_float_configured },
+    SnacksPickerBorder = { fg = c.green, bg = bg_float_configured },
+    SnacksPickerInput = { fg = c.fg, bg = bg_float_configured },
+    SnacksPickerInputBorder = { fg = c.cyan, bg = bg_float_configured },
+    SnacksPickerInputTitle = { fg = c.cyan, bg = bg_float_configured },
+    SnacksPickerListTitle = { fg = c.green, bg = bg_float_configured },
+    SnacksPickerPreviewTitle = { fg = c.green, bg = bg_float_configured },
+    SnacksPickerMatch = { fg = c.pink, bold = true },
+    SnacksPickerSelected = { fg = c.magenta2, bold = true },
+
+    -- Render Markdown
+    RenderMarkdownBullet = { fg = c.orange },
+    RenderMarkdownDash = { fg = c.orange },
+    RenderMarkdownCode = { bg = c.bg_dark },
+    RenderMarkdownCodeInline = { link = "@markup.raw.markdown_inline" },
+    RenderMarkdownTableHead = { fg = c.red },
+    RenderMarkdownTableRow = { fg = c.orange },
+    RenderMarkdownQuote = { fg = c.comment },
+
     TreesitterContext = { bg = util.darken(c.fg_gutter, 0.8) },
     Hlargs = { fg = c.yellow },
     -- TreesitterContext = { bg = util.darken(c.bg_visual, 0.4) },
@@ -905,8 +1033,26 @@ function M.setup()
   for i, color in ipairs(markdown_rainbow) do
     theme.highlights["@markup.heading." .. i .. ".markdown"] = { fg = color, bold = true }
     theme.highlights["Headline" .. i] = { bg = util.darken(color, 0.05) }
+    theme.highlights["RenderMarkdownH" .. i .. "Fg"] = { fg = color, bold = true }
+    theme.highlights["RenderMarkdownH" .. i .. "Bg"] = { bg = util.darken(color, 0.08) }
   end
   theme.highlights["Headline"] = { link = "Headline1" }
+
+  local palette_name = options.palette or ""
+  local is_pop_palette = type(palette_name) == "string"
+    and (palette_name:find("_pop", 1, true) or palette_name:find("_glow", 1, true))
+  if is_pop_palette then
+    theme.highlights.Function = { fg = c.green, style = options.styles.functions }
+    theme.highlights.Type = { fg = c.bright_cyan }
+    theme.highlights.Keyword = { fg = c.magenta, style = options.styles.keywords }
+    theme.highlights.Comment = { fg = c.comment, style = options.styles.comments }
+    theme.highlights["@keyword"] = { fg = c.magenta, style = options.styles.keywords }
+    theme.highlights["@keyword.return"] = { fg = c.magenta, style = options.styles.keywords }
+    theme.highlights["@operator"] = { fg = c.fg_dark }
+    theme.highlights["@punctuation.delimiter"] = { fg = c.fg_dark }
+    theme.highlights["@variable.member"] = { fg = c.cyan }
+    theme.highlights["@property"] = { fg = c.cyan }
+  end
 
   if not vim.diagnostic then
     local severity_map = {
