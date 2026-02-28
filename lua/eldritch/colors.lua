@@ -169,26 +169,26 @@ M.kanagawa = extend_palette(M.default, {
 
 ---@class Palette
 M.kanagawa_azure = extend_palette(M.kanagawa, {
-  function_fg = "#40d0ff",
-  cyan = "#40d0ff",
-  bright_cyan = "#60e0ff",
-  dark_cyan = "#30a8d0",
+  function_fg = "#4cb8d8",
+  cyan = "#4cb8d8",
+  bright_cyan = "#5cc8e8",
+  dark_cyan = "#3898b0",
 })
 
 ---@class Palette
 M.kanagawa_emerald = extend_palette(M.kanagawa, {
-  function_fg = "#50ff90",
-  green = "#50ff90",
-  bright_green = "#70ffa8",
-  dark_green = "#40c878",
+  function_fg = "#3ec78a",
+  green = "#3ec78a",
+  bright_green = "#4ed89a",
+  dark_green = "#2a9868",
 })
 
 ---@class Palette
 M.kanagawa_crimson = extend_palette(M.kanagawa, {
-  function_fg = "#ff6090",
-  pink = "#ff6090",
-  red = "#ff6090",
-  bright_red = "#ff4880",
+  function_fg = "#e85888",
+  pink = "#e85888",
+  red = "#e85888",
+  bright_red = "#d84878",
 })
 
 ---@class Palette
@@ -656,26 +656,26 @@ M.tokyonight = extend_palette(M.default, {
 
 ---@class Palette
 M.tokyonight_azure = extend_palette(M.tokyonight, {
-  function_fg = "#40d0ff",
-  cyan = "#40d0ff",
-  bright_cyan = "#60e0ff",
-  dark_cyan = "#30a8d0",
+  function_fg = "#4cb8d8",
+  cyan = "#4cb8d8",
+  bright_cyan = "#5cc8e8",
+  dark_cyan = "#3898b0",
 })
 
 ---@class Palette
 M.tokyonight_emerald = extend_palette(M.tokyonight, {
-  function_fg = "#50ff90",
-  green = "#50ff90",
-  bright_green = "#70ffa8",
-  dark_green = "#40c878",
+  function_fg = "#3ec78a",
+  green = "#3ec78a",
+  bright_green = "#4ed89a",
+  dark_green = "#2a9868",
 })
 
 ---@class Palette
 M.tokyonight_crimson = extend_palette(M.tokyonight, {
-  function_fg = "#ff6090",
-  pink = "#ff6090",
-  red = "#ff6090",
-  bright_red = "#ff4880",
+  function_fg = "#e85888",
+  pink = "#e85888",
+  red = "#e85888",
+  bright_red = "#d84878",
 })
 
 ---@class Palette
@@ -931,26 +931,26 @@ M.rosepine = extend_palette(M.default, {
 
 ---@class Palette
 M.rosepine_azure = extend_palette(M.rosepine, {
-  function_fg = "#40d0ff",
-  cyan = "#40d0ff",
-  bright_cyan = "#60e0ff",
-  dark_cyan = "#30a8d0",
+  function_fg = "#4cb8d8",
+  cyan = "#4cb8d8",
+  bright_cyan = "#5cc8e8",
+  dark_cyan = "#3898b0",
 })
 
 ---@class Palette
 M.rosepine_emerald = extend_palette(M.rosepine, {
-  function_fg = "#50ff90",
-  green = "#50ff90",
-  bright_green = "#70ffa8",
-  dark_green = "#40c878",
+  function_fg = "#3ec78a",
+  green = "#3ec78a",
+  bright_green = "#4ed89a",
+  dark_green = "#2a9868",
 })
 
 ---@class Palette
 M.rosepine_crimson = extend_palette(M.rosepine, {
-  function_fg = "#ff6090",
-  pink = "#ff6090",
-  red = "#ff6090",
-  bright_red = "#ff4880",
+  function_fg = "#e85888",
+  pink = "#e85888",
+  red = "#e85888",
+  bright_red = "#d84878",
 })
 
 ---@class Palette
@@ -1532,7 +1532,7 @@ M.vscode_dark = extend_palette(M.default, {
 
 ---@class Palette
 M.vscode_dark_azure = extend_palette(M.vscode_dark, {
-  function_fg = "#4fc1ff",
+  function_fg = "#4cb8d8",
 })
 
 ---@class Palette
@@ -1542,7 +1542,7 @@ M.vscode_dark_emerald = extend_palette(M.vscode_dark, {
 
 ---@class Palette
 M.vscode_dark_crimson = extend_palette(M.vscode_dark, {
-  function_fg = "#f44747",
+  function_fg = "#e85888",
 })
 
 ---@class Palette
@@ -1742,9 +1742,9 @@ M.fusion_kanagawa = extend_palette(M.darker, {
   gitSigns = { change = "#52d8ff", add = "#70ecb8", delete = "#f888a8" },
 })
 
-M.fusion_kanagawa_azure = extend_palette(M.fusion_kanagawa, { function_fg = "#52d8ff" })
-M.fusion_kanagawa_emerald = extend_palette(M.fusion_kanagawa, { function_fg = "#70ecb8" })
-M.fusion_kanagawa_crimson = extend_palette(M.fusion_kanagawa, { function_fg = "#f888a8" })
+M.fusion_kanagawa_azure = extend_palette(M.fusion_kanagawa, { function_fg = "#4cb8d8" })
+M.fusion_kanagawa_emerald = extend_palette(M.fusion_kanagawa, { function_fg = "#50c890" })
+M.fusion_kanagawa_crimson = extend_palette(M.fusion_kanagawa, { function_fg = "#e85888" })
 
 ---@class Palette
 M.fusion_tokyonight = extend_palette(M.darker, {
@@ -1775,9 +1775,9 @@ M.fusion_tokyonight = extend_palette(M.darker, {
   gitSigns = { change = "#48d0ff", add = "#68e898", delete = "#f06878" },
 })
 
-M.fusion_tokyonight_azure = extend_palette(M.fusion_tokyonight, { function_fg = "#48d0ff" })
-M.fusion_tokyonight_emerald = extend_palette(M.fusion_tokyonight, { function_fg = "#68e898" })
-M.fusion_tokyonight_crimson = extend_palette(M.fusion_tokyonight, { function_fg = "#f078c0" })
+M.fusion_tokyonight_azure = extend_palette(M.fusion_tokyonight, { function_fg = "#4cb8d8" })
+M.fusion_tokyonight_emerald = extend_palette(M.fusion_tokyonight, { function_fg = "#4cc888" })
+M.fusion_tokyonight_crimson = extend_palette(M.fusion_tokyonight, { function_fg = "#e85888" })
 
 ---@class Palette
 M.fusion_rosepine = extend_palette(M.darker, {
@@ -1808,16 +1808,16 @@ M.fusion_rosepine = extend_palette(M.darker, {
   gitSigns = { change = "#70c0c8", add = "#80c8a0", delete = "#d86080" },
 })
 
-M.fusion_rosepine_azure = extend_palette(M.fusion_rosepine, { function_fg = "#70c0c8" })
+M.fusion_rosepine_azure = extend_palette(M.fusion_rosepine, { function_fg = "#4cb8d8" })
 M.fusion_rosepine_emerald = extend_palette(M.fusion_rosepine, {
-  function_fg = "#50ff88",
-  green = "#50ff88",
-  bright_green = "#30ff70",
-  dark_green = "#40c870",
-  git = { change = "#70c0c8", add = "#50ff88", delete = "#d86080" },
-  gitSigns = { change = "#70c0c8", add = "#50ff88", delete = "#d86080" },
+  function_fg = "#3ec78a",
+  green = "#3ec78a",
+  bright_green = "#4ed89a",
+  dark_green = "#2a9868",
+  git = { change = "#70c0c8", add = "#3ec78a", delete = "#d86080" },
+  gitSigns = { change = "#70c0c8", add = "#3ec78a", delete = "#d86080" },
 })
-M.fusion_rosepine_crimson = extend_palette(M.fusion_rosepine, { function_fg = "#e87898" })
+M.fusion_rosepine_crimson = extend_palette(M.fusion_rosepine, { function_fg = "#e85888" })
 
 ---@class Palette
 M.fusion_gruvbox = extend_palette(M.darker, {
