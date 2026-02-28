@@ -50,7 +50,7 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
 {
-  "rcorreia/eldritch.nvim",
+  "raulcorreia7/eldritch.nvim",
   lazy = false,
   priority = 1000,
   opts = {},
